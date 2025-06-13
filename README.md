@@ -129,7 +129,21 @@ pip install -r requirements.txt
 curl.exe -X GET "http://127.0.0.1:5000/saudacao?nome=Joao"
 curl.exe --% -X POST http://127.0.0.1:5000/soma -H "Content-Type: application/json" -d "{ \"a\":7,\"b\":5 }"
 ```
+## Resposta - Parte 1 - API
 
+      command: 
+         curl.exe -X GET "http://127.0.0.1:5000/saudacao?nome=Joao"
+
+      resposta: 
+         Olá, Joao!
+
+    command: 
+      curl.exe --% -X POST http://127.0.0.1:5000/soma -H "Content-Type: application/json" -d "{ \"a\":7,\"b\":5 }"
+
+      resposta:
+                  {
+                  "soma": 12
+                  }
 ---
 
 ### 2. Análise de Dados
@@ -152,6 +166,20 @@ curl.exe --% -X POST http://127.0.0.1:5000/soma -H "Content-Type: application/js
    * Soma a coluna **PONTOS**.
    * Imprime no console um relatório.
 
+## Resposta - Parte 2 – Exemplo de saída (analysis.py)
+      | ID MÁQUINA | Depósitos |
+      |-----------:|----------:|
+      |         94 |        20 |
+      |         97 |        30 |
+      |        100 |        21 |
+      |        106 |         2 |
+      |        119 |         1 |
+      |        123 |        25 |
+      |        126 |         1 |
+
+      **Pontos totais distribuídos:** 635
+
+
 ---
 
 ### 3. Operações Matemáticas
@@ -168,7 +196,22 @@ curl.exe --% -X POST http://127.0.0.1:5000/soma -H "Content-Type: application/js
    * Mostra soma, subtração, multiplicação e divisão.
    * Indica para cada número se é par/ímpar e primo/não primo.
 
----
+
+## Resposta Parte 3 – Exemplo de execução (operacoes.py)
+```bash
+   PS C:\Users\Joao\Documents\Desafio\ecoloop-teste\operacoes> py .\operacoes.py
+   Digite o primeiro número inteiro: 5
+   Digite o segundo número inteiro: 5
+
+   Soma:         5 + 5 = 10
+   Subtração:   5 - 5 = 0
+   Multiplicação: 5 * 5 = 25
+   Divisão:     5 / 5 = 1.00
+
+   O primeiro número (5) é ímpar e primo.
+
+   O segundo número (5) é ímpar e primo.
+```
 
 ## Licença
 
